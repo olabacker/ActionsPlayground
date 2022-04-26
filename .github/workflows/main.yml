@@ -33,9 +33,12 @@ jobs:
       - name: create string
         run: |
           BODY=$(cat << EOF
-          first line
-          ${{ github.event.commits[0].message }}
-          third line
+          ## Commit
+          
+          **Author**: ${{ commits[][author][name] }}  ${{commits[][author]}}
+          
+           ${{ github.event.commits[0].message }}
+           ${{commits[][timestamp] }}
           EOF
           )
           echo "BODY<<EOF" >> $GITHUB_ENV
