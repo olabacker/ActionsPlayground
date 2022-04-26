@@ -38,8 +38,8 @@ jobs:
           third line
           EOF
           )
-          echo "MY_STRING<<EOF" >> $GITHUB_ENV
-          echo "$MY_STRING" >> $GITHUB_ENV
+          echo "BODY<<EOF" >> $GITHUB_ENV
+          echo "$BODY" >> $GITHUB_ENV
           echo "EOF" >> $GITHUB_ENV
         id: my_string
       - name: display string
