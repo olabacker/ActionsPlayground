@@ -35,7 +35,7 @@ jobs:
           BODY=$(cat << EOF
           ## Commit
           
-          **Author**: ${{ github.event.commits[0][author][name] }}  ${{github.event.commits[0][author]}}
+          **Author**: ${{ github.event.commits[0].author.name }}  ${{github.event.commits[0].author}}
           
            ${{ github.event.commits[0].message }}
            ${{commits[][timestamp] }}
