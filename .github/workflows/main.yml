@@ -35,10 +35,10 @@ jobs:
           BODY=$(cat << EOF
           ## Commit
           
-          **Author**: ${{ github.event.commits[0].author.name }}  ${{github.event.commits[0].author}}
-          
-           ${{ github.event.commits[0].message }}
-           ${{github.event.commits[0].timestamp }}
+          **Author**: ${{ github.event.commits[0].author.name }}  (${{github.event.commits[0].author.email}})
+          **Message**: ${{ github.event.commits[0].message }}
+       
+           #${{github.event.commits[0].timestamp }}
           EOF
           )
           echo "BODY<<EOF" >> $GITHUB_ENV
