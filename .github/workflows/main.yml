@@ -38,7 +38,7 @@ jobs:
           **Author**: ${{ github.event.commits[0].author.name }}  ${{github.event.commits[0].author}}
           
            ${{ github.event.commits[0].message }}
-           ${{commits[][timestamp] }}
+           ${{commits[0].timestamp }}
           EOF
           )
           echo "BODY<<EOF" >> $GITHUB_ENV
